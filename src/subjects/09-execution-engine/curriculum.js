@@ -1,0 +1,72 @@
+export default {
+  id: '09-execution-engine',
+  title: 'Autonomous Execution Engine',
+  icon: '⚡',
+  colorHex: '#6366f1',
+  description: 'Build a production execution engine with order management, risk controls, and system resilience.',
+  difficulty: 'advanced',
+  estimatedHours: 5,
+  prerequisites: ['07-trading-strategies', '08-backtesting'],
+  chapters: [
+    {
+      id: 'c1-order-management',
+      title: 'Order Management System',
+      description: 'Design order lifecycle, smart routing, and rate limiting.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-order-lifecycle', title: 'Order Lifecycle & State Machine', difficulty: 'advanced', readingMinutes: 15, description: 'Order states: pending, partial, filled, cancelled.' },
+        { id: 's2-smart-routing', title: 'Smart Order Routing', difficulty: 'advanced', readingMinutes: 12, description: 'Route orders across exchanges for best execution.' },
+        { id: 's3-rate-limiting', title: 'Order Queuing & Rate Limiting', difficulty: 'advanced', readingMinutes: 12, description: 'API rate limiting and order queue management.' },
+        { id: 's4-partial-fills', title: 'Partial Fills & Amendments', difficulty: 'advanced', readingMinutes: 15, description: 'Handle partial fills and order amendments.' },
+      ],
+    },
+    {
+      id: 'c2-zerodha-execution',
+      title: 'Zerodha Execution',
+      description: 'Execute trades on Zerodha Kite with bracket orders and GTT.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-place-orders', title: 'Place/Modify/Cancel Orders', difficulty: 'advanced', readingMinutes: 15, description: 'Place, modify, and cancel orders via Kite API.' },
+        { id: 's2-bracket-cover', title: 'Bracket & Cover Orders', difficulty: 'advanced', readingMinutes: 12, description: 'Use bracket and cover orders for risk management.' },
+        { id: 's3-gtt-orders', title: 'GTT (Good Till Triggered)', difficulty: 'advanced', readingMinutes: 12, description: 'Set up GTT orders for swing trading.' },
+        { id: 's4-positions', title: 'Position & Holdings Management', difficulty: 'advanced', readingMinutes: 15, description: 'Track positions, holdings, and P&L in real-time.' },
+      ],
+    },
+    {
+      id: 'c3-delta-execution',
+      title: 'Delta Exchange Execution',
+      description: 'Execute crypto derivatives trades with leverage management.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-rest-orders', title: 'REST Order Placement', difficulty: 'advanced', readingMinutes: 15, description: 'Place orders via Delta Exchange REST API.' },
+        { id: 's2-ws-updates', title: 'WebSocket Order Updates', difficulty: 'advanced', readingMinutes: 12, description: 'Stream order status updates via WebSocket.' },
+        { id: 's3-leverage', title: 'Leverage & Liquidation Management', difficulty: 'advanced', readingMinutes: 12, description: 'Manage leverage and prevent liquidation.' },
+        { id: 's4-funding-settlement', title: 'Funding & Settlement', difficulty: 'advanced', readingMinutes: 15, description: 'Handle funding rate collection and settlement.' },
+      ],
+    },
+    {
+      id: 'c4-risk-controls',
+      title: 'Risk Controls',
+      description: 'Implement pre-trade checks, position sizing, and kill switches.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-pre-trade', title: 'Pre-Trade Risk Checks', difficulty: 'advanced', readingMinutes: 12, description: 'Validate size, exposure, and concentration limits.' },
+        { id: 's2-position-sizing', title: 'Position Sizing (Kelly, Fixed Fractional)', difficulty: 'advanced', readingMinutes: 15, description: 'Kelly criterion and fixed fractional sizing.' },
+        { id: 's3-circuit-breaker', title: 'Max Drawdown Circuit Breaker', difficulty: 'advanced', readingMinutes: 12, description: 'Auto-halt trading on max drawdown threshold.' },
+        { id: 's4-kill-switch', title: 'Daily Loss Limits & Kill Switch', difficulty: 'advanced', readingMinutes: 15, description: 'Emergency kill switch to flatten all positions.' },
+      ],
+    },
+    {
+      id: 'c5-resilience',
+      title: 'System Resilience',
+      description: 'Build fault-tolerant systems with reconnection and disaster recovery.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-connection-recovery', title: 'Connection Recovery & Reconnection', difficulty: 'advanced', readingMinutes: 15, description: 'WebSocket reconnection and heartbeat monitoring.' },
+        { id: 's2-order-reconciliation', title: 'Order Reconciliation', difficulty: 'advanced', readingMinutes: 12, description: 'Reconcile local and exchange order states.' },
+        { id: 's3-disaster-recovery', title: 'Disaster Recovery & Failover', difficulty: 'advanced', readingMinutes: 12, description: 'Failover procedures and backup systems.' },
+        { id: 's4-audit-trail', title: 'Audit Trail & Compliance Logging', difficulty: 'advanced', readingMinutes: 15, description: 'Comprehensive audit trail and trade records.' },
+      ],
+    },
+  ],
+}

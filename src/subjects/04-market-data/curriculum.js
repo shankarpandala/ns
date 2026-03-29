@@ -1,0 +1,60 @@
+export default {
+  id: '04-market-data',
+  title: 'Market Data Infrastructure',
+  icon: '📊',
+  colorHex: '#06b6d4',
+  description: 'Build a robust market data pipeline with Zerodha Kite, Delta Exchange, and alternative data sources.',
+  difficulty: 'intermediate',
+  estimatedHours: 4,
+  prerequisites: ['01-wsl2-foundation'],
+  chapters: [
+    {
+      id: 'c1-zerodha-kite',
+      title: 'Zerodha Kite API',
+      description: 'Connect to Zerodha Kite for Indian equity and derivatives data.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-account-registration', title: 'Account & API App Registration', difficulty: 'beginner', readingMinutes: 12, description: 'Register a Zerodha developer app for API access.' },
+        { id: 's2-authentication', title: 'Authentication Flow (Login, 2FA, Token)', difficulty: 'intermediate', readingMinutes: 15, description: 'Implement the Kite Connect login and token flow.' },
+        { id: 's3-instruments', title: 'Instruments & Symbol Mapping', difficulty: 'intermediate', readingMinutes: 12, description: 'Download instrument lists and map trading symbols.' },
+        { id: 's4-historical-data', title: 'Historical Data (Candles, Tick)', difficulty: 'intermediate', readingMinutes: 15, description: 'Fetch historical candle and tick data from Kite.' },
+      ],
+    },
+    {
+      id: 'c2-delta-exchange',
+      title: 'Delta Exchange India API',
+      description: 'Connect to Delta Exchange for crypto derivatives trading in India.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-account-setup', title: 'Account Setup & API Keys', difficulty: 'beginner', readingMinutes: 12, description: 'Create Delta Exchange India account and generate keys.' },
+        { id: 's2-rest-websocket', title: 'REST API & WebSocket Streams', difficulty: 'intermediate', readingMinutes: 15, description: 'REST endpoints and WebSocket streaming setup.' },
+        { id: 's3-contract-specs', title: 'Futures & Options Contract Specs', difficulty: 'intermediate', readingMinutes: 12, description: 'Contract specifications, settlement, and expiry cycles.' },
+        { id: 's4-orders-margin', title: 'Order Types & Margin System', difficulty: 'intermediate', readingMinutes: 15, description: 'Order types, margin calculation, and leverage.' },
+      ],
+    },
+    {
+      id: 'c3-realtime-pipeline',
+      title: 'Real-Time Data Pipeline',
+      description: 'Build high-throughput data pipelines for live market data.',
+      estimatedMinutes: 60,
+      sections: [
+        { id: 's1-websocket-architecture', title: 'WebSocket Architecture', difficulty: 'intermediate', readingMinutes: 15, description: 'Design WebSocket connections for multi-exchange feeds.' },
+        { id: 's2-tick-ingestion', title: 'Tick Data Ingestion & Storage', difficulty: 'intermediate', readingMinutes: 15, description: 'High-throughput tick data ingestion pipeline.' },
+        { id: 's3-timescaledb', title: 'TimescaleDB for Time-Series', difficulty: 'intermediate', readingMinutes: 15, description: 'Set up TimescaleDB for efficient time-series storage.' },
+        { id: 's4-data-quality', title: 'Data Normalization & Quality Checks', difficulty: 'intermediate', readingMinutes: 12, description: 'Data normalization, gap detection, and quality monitoring.' },
+      ],
+    },
+    {
+      id: 'c4-alternative-data',
+      title: 'Alternative Data Sources',
+      description: 'Augment trading data with NSE feeds, options chain, and institutional flows.',
+      estimatedMinutes: 50,
+      sections: [
+        { id: 's1-nse-bhav', title: 'NSE Bhav Copy & Index Data', difficulty: 'intermediate', readingMinutes: 12, description: 'Parse NSE bhav copies and index constituent data.' },
+        { id: 's2-options-chain', title: 'Options Chain & OI Data', difficulty: 'intermediate', readingMinutes: 12, description: 'Real-time options chain and open interest analysis.' },
+        { id: 's3-fii-dii', title: 'FII/DII Flow Data', difficulty: 'intermediate', readingMinutes: 12, description: 'Track FII/DII activity and participant-wise positions.' },
+        { id: 's4-corporate-events', title: 'Corporate Actions & Events Calendar', difficulty: 'intermediate', readingMinutes: 12, description: 'Corporate actions, earnings calendar, and RBI dates.' },
+      ],
+    },
+  ],
+}

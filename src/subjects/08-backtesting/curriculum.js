@@ -1,0 +1,60 @@
+export default {
+  id: '08-backtesting',
+  title: 'Backtesting & Simulation',
+  icon: '🔬',
+  colorHex: '#eab308',
+  description: 'Build event-driven backtesting engines with Indian market specifics and walk-forward validation.',
+  difficulty: 'intermediate',
+  estimatedHours: 4,
+  prerequisites: ['05-technical-indicators'],
+  chapters: [
+    {
+      id: 'c1-framework',
+      title: 'Backtesting Framework',
+      description: 'Design and build an event-driven backtesting engine from scratch.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-event-driven', title: 'Event-Driven Engine Design', difficulty: 'intermediate', readingMinutes: 15, description: 'Architecture of an event-driven backtesting engine.' },
+        { id: 's2-data-handler', title: 'Data Handler & Feed', difficulty: 'intermediate', readingMinutes: 12, description: 'Data handler for OHLCV feed management.' },
+        { id: 's3-execution-handler', title: 'Execution Handler & Slippage', difficulty: 'intermediate', readingMinutes: 15, description: 'Simulate execution with slippage and latency.' },
+        { id: 's4-performance-analytics', title: 'Performance Analytics', difficulty: 'intermediate', readingMinutes: 12, description: 'Sharpe ratio, Sortino, max drawdown, trade stats.' },
+      ],
+    },
+    {
+      id: 'c2-indian-specifics',
+      title: 'Indian Market Specifics',
+      description: 'Model NSE trading hours, circuit breakers, taxes, and margin requirements.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-trading-hours', title: 'NSE Trading Hours & Holidays', difficulty: 'intermediate', readingMinutes: 12, description: 'Pre-open session, continuous trading, and holiday calendar.' },
+        { id: 's2-circuit-breakers', title: 'Circuit Breakers & Price Bands', difficulty: 'intermediate', readingMinutes: 12, description: 'Circuit breaker rules and price band limits.' },
+        { id: 's3-stt-brokerage', title: 'STT, Brokerage & Tax Modeling', difficulty: 'intermediate', readingMinutes: 15, description: 'Model STT, stamp duty, GST, and brokerage costs.' },
+        { id: 's4-lot-sizes', title: 'Lot Sizes & Margin Requirements', difficulty: 'intermediate', readingMinutes: 15, description: 'F&O lot sizes and SPAN margin calculation.' },
+      ],
+    },
+    {
+      id: 'c3-validation',
+      title: 'Walk-Forward & Validation',
+      description: 'Validate strategies with walk-forward optimization and Monte Carlo.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-in-out-sample', title: 'In-Sample vs Out-of-Sample', difficulty: 'intermediate', readingMinutes: 12, description: 'Split data correctly for strategy validation.' },
+        { id: 's2-walk-forward', title: 'Walk-Forward Optimization', difficulty: 'advanced', readingMinutes: 15, description: 'Rolling walk-forward optimization methodology.' },
+        { id: 's3-monte-carlo', title: 'Monte Carlo Simulation', difficulty: 'advanced', readingMinutes: 15, description: 'Monte Carlo for strategy robustness testing.' },
+        { id: 's4-overfitting-detection', title: 'Overfitting Detection', difficulty: 'advanced', readingMinutes: 12, description: 'Detect overfitting with deflated Sharpe ratio.' },
+      ],
+    },
+    {
+      id: 'c4-paper-trading',
+      title: 'Paper Trading',
+      description: 'Bridge from backtest to live with paper trading on real data.',
+      estimatedMinutes: 50,
+      sections: [
+        { id: 's1-zerodha-paper', title: 'Zerodha Paper Trading Setup', difficulty: 'intermediate', readingMinutes: 12, description: 'Set up paper trading with Zerodha sandbox mode.' },
+        { id: 's2-delta-testnet', title: 'Delta Exchange Testnet', difficulty: 'intermediate', readingMinutes: 12, description: 'Use Delta Exchange testnet for crypto testing.' },
+        { id: 's3-simulated-orders', title: 'Live Data with Simulated Orders', difficulty: 'intermediate', readingMinutes: 12, description: 'Execute simulated orders on live market data.' },
+        { id: 's4-comparison', title: 'Performance Comparison (Backtest vs Paper)', difficulty: 'intermediate', readingMinutes: 12, description: 'Compare backtest results with paper trading.' },
+      ],
+    },
+  ],
+}
