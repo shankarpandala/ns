@@ -4,7 +4,6 @@ import Navbar from './components/layout/Navbar'
 import Sidebar from './components/layout/Sidebar'
 import Footer from './components/layout/Footer'
 import useTheme from './hooks/useTheme'
-import useAppStore from './store/appStore'
 
 const HomePage = lazy(() => import('./pages/HomePage'))
 const SubjectPage = lazy(() => import('./pages/SubjectPage'))
@@ -24,7 +23,6 @@ function Loading() {
 
 export default function App() {
   useTheme()
-  const sidebarOpen = useAppStore((s) => s.sidebarOpen)
 
   return (
     <HashRouter>
@@ -32,7 +30,7 @@ export default function App() {
         <Navbar />
         <div className="flex flex-1">
           <Sidebar />
-          <main className={`flex-1 min-w-0 transition-all duration-300 ${sidebarOpen ? 'lg:ml-72' : ''}`}>
+          <main className="flex-1 min-w-0 transition-all duration-300 lg:ml-[280px]">
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
