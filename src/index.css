@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* NemoClaw brand */
+  --color-nemoclaw: #FF6600;
+  --color-nemoclaw-light: #ff8533;
+  --color-nemoclaw-dark: #cc5200;
+
+  /* NVIDIA brand */
+  --color-nvidia: #76B900;
+  --color-nvidia-light: #8dd406;
+
+  /* Trading accents */
+  --color-bull: #22c55e;
+  --color-bear: #ef4444;
+  --color-neutral: #f59e0b;
+
+  /* Subject colors */
+  --color-wsl: #3b82f6;
+  --color-security: #ef4444;
+  --color-claude: #a855f7;
+  --color-market-data: #06b6d4;
+  --color-indicators: #f97316;
+  --color-orderflow: #ec4899;
+  --color-strategies: #22c55e;
+  --color-backtest: #eab308;
+  --color-execution: #6366f1;
+  --color-monitoring: #14b8a6;
+
+  /* Surfaces – light */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f8fafc;
+  --color-surface-raised: #f1f5f9;
+
+  /* Surfaces – dark */
+  --color-surface-dark: #0f172a;
+  --color-surface-dark-alt: #1e293b;
+  --color-surface-dark-raised: #334155;
+
+  /* Text – light */
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+
+  /* Text – dark */
+  --color-text-dark: #e2e8f0;
+  --color-text-dark-muted: #94a3b8;
+
+  /* Borders */
+  --color-border: #e2e8f0;
+  --color-border-dark: #334155;
+
+  /* Status */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* Layout */
+  --sidebar-width: 280px;
+  --navbar-height: 56px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dark body {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-dark);
+}
+
+.dark ::selection { background-color: rgba(255, 102, 0, 0.3); }
+::selection { background-color: rgba(255, 102, 0, 0.2); }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; font-weight: 600; }
+
+pre { border-radius: 0.5rem; overflow-x: auto; }
+pre code { font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.7; tab-size: 2; }
+code { font-family: var(--font-mono); font-size: 0.9em; }
+
+:not(pre) > code {
+  background-color: var(--color-surface-raised);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+.dark :not(pre) > code { background-color: var(--color-surface-dark-raised); }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.dark ::-webkit-scrollbar-thumb { background: #475569; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+* { scrollbar-width: thin; scrollbar-color: #cbd5e1 transparent; }
+.dark * { scrollbar-color: #475569 transparent; }
+
+:focus-visible { outline: 2px solid var(--color-nemoclaw); outline-offset: 2px; border-radius: 2px; }
+.transition-theme { transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+
+@media print {
+  nav, aside, footer, .no-print { display: none !important; }
+  main { margin-left: 0 !important; padding-top: 0 !important; }
+}

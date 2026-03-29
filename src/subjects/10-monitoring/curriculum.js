@@ -1,0 +1,60 @@
+export default {
+  id: '10-monitoring',
+  title: 'Monitoring & Operations',
+  icon: '📡',
+  colorHex: '#14b8a6',
+  description: 'Monitor, alert, log, and maintain your autonomous trading system in production.',
+  difficulty: 'advanced',
+  estimatedHours: 4,
+  prerequisites: ['09-execution-engine'],
+  chapters: [
+    {
+      id: 'c1-dashboard',
+      title: 'Real-Time Dashboard',
+      description: 'Build dashboards for P&L, positions, order flow, and system health.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-pnl-tracking', title: 'P&L Tracking & Greeks Display', difficulty: 'advanced', readingMinutes: 15, description: 'Real-time P&L tracking with options Greeks.' },
+        { id: 's2-position-heatmap', title: 'Position Heatmap', difficulty: 'advanced', readingMinutes: 12, description: 'Visualize positions across instruments.' },
+        { id: 's3-order-flow-viz', title: 'Order Flow Visualization', difficulty: 'advanced', readingMinutes: 12, description: 'Real-time order flow display and analysis.' },
+        { id: 's4-system-health', title: 'System Health Metrics', difficulty: 'advanced', readingMinutes: 15, description: 'CPU, memory, latency, and API health monitoring.' },
+      ],
+    },
+    {
+      id: 'c2-alerting',
+      title: 'Alerting System',
+      description: 'Configure price, risk, and system alerts via Telegram and Discord.',
+      estimatedMinutes: 50,
+      sections: [
+        { id: 's1-price-volume', title: 'Price & Volume Alerts', difficulty: 'intermediate', readingMinutes: 12, description: 'Set up price breakout and volume spike alerts.' },
+        { id: 's2-risk-thresholds', title: 'Risk Threshold Notifications', difficulty: 'advanced', readingMinutes: 12, description: 'Alert on margin utilization and drawdown.' },
+        { id: 's3-system-errors', title: 'System Error Alerts', difficulty: 'advanced', readingMinutes: 12, description: 'API failures, connection drops, and error alerts.' },
+        { id: 's4-telegram-discord', title: 'Telegram/Discord Bot Integration', difficulty: 'intermediate', readingMinutes: 12, description: 'Build alert bots for Telegram and Discord.' },
+      ],
+    },
+    {
+      id: 'c3-logging',
+      title: 'Logging & Observability',
+      description: 'Implement structured logging, log aggregation, and trade journaling.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-structured-logging', title: 'Structured Logging (JSON)', difficulty: 'intermediate', readingMinutes: 15, description: 'Structured JSON logging with Python logging module.' },
+        { id: 's2-log-aggregation', title: 'Log Aggregation & Search', difficulty: 'advanced', readingMinutes: 15, description: 'Aggregate logs with ELK stack or Loki.' },
+        { id: 's3-performance-profiling', title: 'Performance Profiling', difficulty: 'advanced', readingMinutes: 12, description: 'Profile latency and identify bottlenecks.' },
+        { id: 's4-trade-journal', title: 'Trade Journal & Analytics', difficulty: 'intermediate', readingMinutes: 12, description: 'Automated trade journal with analytics.' },
+      ],
+    },
+    {
+      id: 'c4-maintenance',
+      title: 'Maintenance & Updates',
+      description: 'Maintain production systems with zero-downtime updates and backups.',
+      estimatedMinutes: 50,
+      sections: [
+        { id: 's1-rolling-updates', title: 'Rolling Updates with Zero Downtime', difficulty: 'advanced', readingMinutes: 12, description: 'Deploy updates without interrupting trading.' },
+        { id: 's2-database-backup', title: 'Database Backup & Recovery', difficulty: 'advanced', readingMinutes: 12, description: 'TimescaleDB backup and point-in-time recovery.' },
+        { id: 's3-api-versioning', title: 'API Version Management', difficulty: 'intermediate', readingMinutes: 12, description: 'Handle Zerodha/Delta API version changes.' },
+        { id: 's4-security-patches', title: 'Security Patch Workflow', difficulty: 'advanced', readingMinutes: 12, description: 'Apply security patches within NemoClaw sandbox.' },
+      ],
+    },
+  ],
+}

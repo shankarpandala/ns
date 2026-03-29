@@ -1,0 +1,72 @@
+export default {
+  id: '06-order-flow',
+  title: 'Order Flow & Market Microstructure',
+  icon: '🔄',
+  colorHex: '#ec4899',
+  description: 'Master order book dynamics, market depth analysis, and institutional flow tracking.',
+  difficulty: 'advanced',
+  estimatedHours: 5,
+  prerequisites: ['05-technical-indicators'],
+  chapters: [
+    {
+      id: 'c1-order-book',
+      title: 'Order Book Dynamics',
+      description: 'Understand Level 2 data, spread analysis, and book imbalance signals.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-level2-data', title: 'Level 2 Data & Book Structure', difficulty: 'advanced', readingMinutes: 15, description: 'Level 2 data structure, bid/ask arrays, and depth.' },
+        { id: 's2-spread-analysis', title: 'Bid-Ask Spread Analysis', difficulty: 'advanced', readingMinutes: 12, description: 'Effective spread, realized spread, and market quality.' },
+        { id: 's3-book-imbalance', title: 'Book Imbalance & Pressure', difficulty: 'advanced', readingMinutes: 12, description: 'Order book imbalance ratio and directional pressure.' },
+        { id: 's4-heatmaps', title: 'Order Book Heatmaps', difficulty: 'advanced', readingMinutes: 15, description: 'Visualize order book depth with Python heatmaps.' },
+      ],
+    },
+    {
+      id: 'c2-market-depth',
+      title: 'Market Depth Analysis',
+      description: 'Read the DOM, map liquidity, and detect hidden orders.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-dom', title: 'Depth of Market (DOM)', difficulty: 'advanced', readingMinutes: 15, description: 'Reading DOM for Nifty futures trading.' },
+        { id: 's2-liquidity-mapping', title: 'Liquidity Mapping', difficulty: 'advanced', readingMinutes: 12, description: 'Identify liquidity layers and thin/thick zones.' },
+        { id: 's3-iceberg-orders', title: 'Iceberg & Hidden Orders', difficulty: 'advanced', readingMinutes: 12, description: 'Detect iceberg orders and hidden liquidity.' },
+        { id: 's4-queue-position', title: 'Queue Position Estimation', difficulty: 'advanced', readingMinutes: 15, description: 'Estimate queue position and priority at NSE.' },
+      ],
+    },
+    {
+      id: 'c3-order-flow-trading',
+      title: 'Order Flow Trading',
+      description: 'Trade with footprint charts, cumulative delta, and volume profile.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-footprint-charts', title: 'Footprint Charts & Delta', difficulty: 'advanced', readingMinutes: 15, description: 'Footprint charts with delta per price level.' },
+        { id: 's2-cumulative-delta', title: 'Cumulative Delta Analysis', difficulty: 'advanced', readingMinutes: 12, description: 'Cumulative delta divergence and confirmation.' },
+        { id: 's3-absorption', title: 'Absorption & Exhaustion Patterns', difficulty: 'advanced', readingMinutes: 12, description: 'Identify absorption and exhaustion at key levels.' },
+        { id: 's4-volume-profile', title: 'POC, VAH, VAL (Volume Profile)', difficulty: 'advanced', readingMinutes: 15, description: 'Point of Control and Value Area for trading.' },
+      ],
+    },
+    {
+      id: 'c4-microstructure',
+      title: 'Microstructure Models',
+      description: 'Apply academic microstructure models to Indian market data.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-kyle-lambda', title: 'Kyle Lambda & Price Impact', difficulty: 'advanced', readingMinutes: 15, description: 'Kyle model for measuring market impact.' },
+        { id: 's2-pin-vpin', title: 'PIN & VPIN (Informed Trading)', difficulty: 'advanced', readingMinutes: 15, description: 'Probability of informed trading metrics.' },
+        { id: 's3-toxicity', title: 'Toxicity Metrics', difficulty: 'advanced', readingMinutes: 12, description: 'Flow toxicity and adverse selection measures.' },
+        { id: 's4-market-making', title: 'Market Making Dynamics', difficulty: 'advanced', readingMinutes: 12, description: 'Market making inventory risk and spread.' },
+      ],
+    },
+    {
+      id: 'c5-tape-reading',
+      title: 'Tape Reading',
+      description: 'Analyze time & sales, detect large orders, and track institutional flow.',
+      estimatedMinutes: 50,
+      sections: [
+        { id: 's1-time-sales', title: 'Time & Sales Analysis', difficulty: 'advanced', readingMinutes: 12, description: 'Trade classification and T&S interpretation.' },
+        { id: 's2-large-orders', title: 'Large Order Detection', difficulty: 'advanced', readingMinutes: 12, description: 'Algorithms for detecting large order activity.' },
+        { id: 's3-sweep-block', title: 'Sweep & Block Trade Identification', difficulty: 'advanced', readingMinutes: 12, description: 'Identify sweep orders and block trades.' },
+        { id: 's4-institutional-flow', title: 'Institutional Flow Tracking', difficulty: 'advanced', readingMinutes: 12, description: 'Track institutional activity in Indian markets.' },
+      ],
+    },
+  ],
+}

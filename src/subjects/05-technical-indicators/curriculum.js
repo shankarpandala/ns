@@ -1,0 +1,72 @@
+export default {
+  id: '05-technical-indicators',
+  title: 'Technical Indicators & Analysis',
+  icon: '📈',
+  colorHex: '#f97316',
+  description: 'Master trend, momentum, volatility, and volume indicators for Indian market analysis.',
+  difficulty: 'intermediate',
+  estimatedHours: 5,
+  prerequisites: ['04-market-data'],
+  chapters: [
+    {
+      id: 'c1-trend',
+      title: 'Trend Indicators',
+      description: 'Identify market direction with moving averages, MACD, and trend-following tools.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-moving-averages', title: 'Moving Averages (SMA, EMA, DEMA, TEMA)', difficulty: 'intermediate', readingMinutes: 15, description: 'Calculate and interpret various moving averages.' },
+        { id: 's2-macd', title: 'MACD & Signal Line', difficulty: 'intermediate', readingMinutes: 12, description: 'MACD line, signal crossovers, and divergence.' },
+        { id: 's3-supertrend', title: 'Supertrend & Parabolic SAR', difficulty: 'intermediate', readingMinutes: 12, description: 'ATR-based trend indicators for entry and exit.' },
+        { id: 's4-adx', title: 'ADX & Directional Movement', difficulty: 'intermediate', readingMinutes: 12, description: 'Measure trend strength with ADX and DI lines.' },
+      ],
+    },
+    {
+      id: 'c2-momentum',
+      title: 'Momentum & Oscillators',
+      description: 'Gauge market momentum with RSI, stochastic, and VWAP indicators.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-rsi', title: 'RSI & Stochastic RSI', difficulty: 'intermediate', readingMinutes: 15, description: 'RSI calculation, overbought/oversold, StochRSI.' },
+        { id: 's2-cci-williams', title: 'CCI, Williams %R, MFI', difficulty: 'intermediate', readingMinutes: 12, description: 'Commodity Channel Index and money flow indicators.' },
+        { id: 's3-roc-momentum', title: 'Rate of Change & Momentum', difficulty: 'intermediate', readingMinutes: 12, description: 'ROC oscillator and momentum measurement.' },
+        { id: 's4-vwap', title: 'VWAP & Anchored VWAP', difficulty: 'intermediate', readingMinutes: 15, description: 'Volume-weighted average price for institutional levels.' },
+      ],
+    },
+    {
+      id: 'c3-volatility',
+      title: 'Volatility Indicators',
+      description: 'Measure and trade volatility with Bollinger Bands, ATR, and implied vol.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-bollinger-keltner', title: 'Bollinger Bands & Keltner Channels', difficulty: 'intermediate', readingMinutes: 15, description: 'Bollinger squeeze and Keltner channel setups.' },
+        { id: 's2-atr', title: 'ATR & Normalized ATR', difficulty: 'intermediate', readingMinutes: 12, description: 'Average True Range for position sizing and stops.' },
+        { id: 's3-historical-implied', title: 'Historical vs Implied Volatility', difficulty: 'advanced', readingMinutes: 15, description: 'HV vs IV comparison and volatility cone.' },
+        { id: 's4-vol-smile-skew', title: 'Volatility Smile & Skew', difficulty: 'advanced', readingMinutes: 12, description: 'Nifty options volatility smile and skew patterns.' },
+      ],
+    },
+    {
+      id: 'c4-volume',
+      title: 'Volume Analysis',
+      description: 'Analyze volume patterns with OBV, A/D line, and volume profile.',
+      estimatedMinutes: 50,
+      sections: [
+        { id: 's1-obv-profile', title: 'OBV & Volume Profile', difficulty: 'intermediate', readingMinutes: 12, description: 'On-Balance Volume and volume profile with POC.' },
+        { id: 's2-ad-line', title: 'Accumulation/Distribution Line', difficulty: 'intermediate', readingMinutes: 12, description: 'A/D line calculation and divergence signals.' },
+        { id: 's3-cmf', title: 'Chaikin Money Flow', difficulty: 'intermediate', readingMinutes: 12, description: 'CMF indicator for money flow direction.' },
+        { id: 's4-volume-weighted', title: 'Volume Weighted Indicators', difficulty: 'intermediate', readingMinutes: 12, description: 'VWMA, volume oscillator, and weighted analysis.' },
+      ],
+    },
+    {
+      id: 'c5-advanced',
+      title: 'Advanced Indicators',
+      description: 'Master Ichimoku, alternative chart types, and custom indicator development.',
+      estimatedMinutes: 55,
+      sections: [
+        { id: 's1-ichimoku', title: 'Ichimoku Cloud', difficulty: 'advanced', readingMinutes: 15, description: 'Tenkan, Kijun, Senkou spans, and Chikou analysis.' },
+        { id: 's2-heikin-ashi-renko', title: 'Heikin-Ashi & Renko', difficulty: 'intermediate', readingMinutes: 12, description: 'Noise-reducing chart types for trend clarity.' },
+        { id: 's3-market-internals', title: 'Market Internals (A/D Line, TICK, TRIN)', difficulty: 'advanced', readingMinutes: 15, description: 'NSE market breadth and internal indicators.' },
+        { id: 's4-custom-indicators', title: 'Custom Indicator Development', difficulty: 'advanced', readingMinutes: 12, description: 'Build custom indicators with Python pandas/numpy.' },
+      ],
+    },
+  ],
+}
